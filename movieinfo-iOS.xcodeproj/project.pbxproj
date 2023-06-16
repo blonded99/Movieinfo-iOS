@@ -13,6 +13,7 @@
 		78A16EAE2A3C985600267AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A16EAC2A3C985600267AAD /* Main.storyboard */; };
 		78A16EB02A3C985700267AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A16EAF2A3C985700267AAD /* Assets.xcassets */; };
 		78A16EB32A3C985700267AAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A16EB12A3C985700267AAD /* LaunchScreen.storyboard */; };
+		78A16EBC2A3C98E600267AAD /* Moive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A16EBB2A3C98E600267AAD /* Moive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		78A16EAF2A3C985700267AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78A16EB22A3C985700267AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78A16EB42A3C985700267AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78A16EBB2A3C98E600267AAD /* Moive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		78A16E9A2A3C985600267AAD = {
 			isa = PBXGroup;
 			children = (
+				78A16EBA2A3C98C400267AAD /* Models */,
 				78A16EA52A3C985600267AAD /* movieinfo-iOS */,
 				78A16EA42A3C985600267AAD /* Products */,
 			);
@@ -65,6 +68,14 @@
 				78A16EB42A3C985700267AAD /* Info.plist */,
 			);
 			path = "movieinfo-iOS";
+			sourceTree = "<group>";
+		};
+		78A16EBA2A3C98C400267AAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78A16EBB2A3C98E600267AAD /* Moive.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				78A16EAB2A3C985600267AAD /* ViewController.swift in Sources */,
 				78A16EA72A3C985600267AAD /* AppDelegate.swift in Sources */,
+				78A16EBC2A3C98E600267AAD /* Moive.swift in Sources */,
 				78A16EA92A3C985600267AAD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
