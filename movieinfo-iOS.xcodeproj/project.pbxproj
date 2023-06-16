@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		782FF80A2A3CEE8F00BBDD7B /* movies_metadata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 782FF8092A3CEE8F00BBDD7B /* movies_metadata.csv */; };
+		782FF80C2A3CEEAE00BBDD7B /* CSVLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782FF80B2A3CEEAE00BBDD7B /* CSVLoader.swift */; };
 		78A16EA72A3C985600267AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A16EA62A3C985600267AAD /* AppDelegate.swift */; };
 		78A16EA92A3C985600267AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A16EA82A3C985600267AAD /* SceneDelegate.swift */; };
 		78A16EAB2A3C985600267AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A16EAA2A3C985600267AAD /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		782FF8092A3CEE8F00BBDD7B /* movies_metadata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = movies_metadata.csv; sourceTree = "<group>"; };
+		782FF80B2A3CEEAE00BBDD7B /* CSVLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVLoader.swift; sourceTree = "<group>"; };
 		78A16EA32A3C985600267AAD /* movieinfo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "movieinfo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A16EA62A3C985600267AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A16EA82A3C985600267AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		78A16E9A2A3C985600267AAD = {
 			isa = PBXGroup;
 			children = (
+				782FF80B2A3CEEAE00BBDD7B /* CSVLoader.swift */,
 				782FF8082A3CEE7900BBDD7B /* CSVsource */,
 				78A16EBA2A3C98C400267AAD /* Models */,
 				78A16EA52A3C985600267AAD /* movieinfo-iOS */,
@@ -164,6 +167,7 @@
 				78A16EAB2A3C985600267AAD /* ViewController.swift in Sources */,
 				78A16EA72A3C985600267AAD /* AppDelegate.swift in Sources */,
 				78A16EBC2A3C98E600267AAD /* Movie.swift in Sources */,
+				782FF80C2A3CEEAE00BBDD7B /* CSVLoader.swift in Sources */,
 				78A16EA92A3C985600267AAD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
