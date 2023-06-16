@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		782FF80A2A3CEE8F00BBDD7B /* movies_metadata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 782FF8092A3CEE8F00BBDD7B /* movies_metadata.csv */; };
 		78A16EA72A3C985600267AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A16EA62A3C985600267AAD /* AppDelegate.swift */; };
 		78A16EA92A3C985600267AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A16EA82A3C985600267AAD /* SceneDelegate.swift */; };
 		78A16EAB2A3C985600267AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A16EAA2A3C985600267AAD /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		782FF8092A3CEE8F00BBDD7B /* movies_metadata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = movies_metadata.csv; sourceTree = "<group>"; };
 		78A16EA32A3C985600267AAD /* movieinfo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "movieinfo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A16EA62A3C985600267AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A16EA82A3C985600267AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,9 +41,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		782FF8082A3CEE7900BBDD7B /* CSVsource */ = {
+			isa = PBXGroup;
+			children = (
+				782FF8092A3CEE8F00BBDD7B /* movies_metadata.csv */,
+			);
+			path = CSVsource;
+			sourceTree = "<group>";
+		};
 		78A16E9A2A3C985600267AAD = {
 			isa = PBXGroup;
 			children = (
+				782FF8082A3CEE7900BBDD7B /* CSVsource */,
 				78A16EBA2A3C98C400267AAD /* Models */,
 				78A16EA52A3C985600267AAD /* movieinfo-iOS */,
 				78A16EA42A3C985600267AAD /* Products */,
@@ -136,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				782FF80A2A3CEE8F00BBDD7B /* movies_metadata.csv in Resources */,
 				78A16EB32A3C985700267AAD /* LaunchScreen.storyboard in Resources */,
 				78A16EB02A3C985700267AAD /* Assets.xcassets in Resources */,
 				78A16EAE2A3C985600267AAD /* Main.storyboard in Resources */,
