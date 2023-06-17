@@ -91,6 +91,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if let idLabel = cell.viewWithTag(12) as? UILabel {
             idLabel.text = "\(movie.id)"
         }
+        
+        if let overviewLabel = cell.viewWithTag(13) as? UILabel {
+            overviewLabel.text = movie.overview
+        }
             
         return cell
     }
