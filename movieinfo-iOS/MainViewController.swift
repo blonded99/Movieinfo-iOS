@@ -79,13 +79,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
 
-        if let label = cell.viewWithTag(1) as? UILabel {
+        if let titleLabel = cell.viewWithTag(1) as? UILabel,
+           let ratingLabel = cell.viewWithTag(2) as? UILabel {
             let movie = topMovies[indexPath.row]
-            label.text = movie.title
+            titleLabel.text = movie.title
+            ratingLabel.text = String(movie.vote_average)
         }
 
         return cell
     }
+
 
 
 }
