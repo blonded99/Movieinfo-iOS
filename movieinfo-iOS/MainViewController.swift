@@ -22,7 +22,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         
         // Load movies from CSV file
-        loadMovies()
+        MovieDataStore.shared.loadMovies()
         
         // Sort movies by popularity
         sortMoviesByPopularity()
@@ -32,27 +32,27 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
     }
     
-    // Load movies using the CSVLoader
-    func loadMovies() {
-        movies = loader.load()
-    }
+//    // Load movies using the CSVLoader
+//    func loadMovies() {
+//        movies = loader.load()
+//    }
     
     // Sort movies by popularity and update topMovies
     func sortMoviesByPopularity() {
-        movies.sort { $0.popularity > $1.popularity }
+        let movies = MovieDataStore.shared.movies.sorted { $0.popularity > $1.popularity }
         topMovies = Array(movies.prefix(20))
     }
 
     // Sort movies by vote count and update topMovies
     func sortMoviesByVoteCount() {
-        movies.sort { $0.vote_count > $1.vote_count }
+        let movies = MovieDataStore.shared.movies.sorted { $0.vote_count > $1.vote_count }
         topMovies = Array(movies.prefix(20))
     }
 
     // Sort movies by vote average and update topMovies
     func sortMoviesByVoteAverage() {
-        let sortedMovies = movies.filter { $0.vote_count >= 1000 }.sorted { $0.vote_average > $1.vote_average }
-        topMovies = Array(sortedMovies.prefix(20))
+        let movies = MovieDataStore.shared.movies.filter { $0.vote_count >= 1000 }.sorted { $0.vote_average > $1.vote_average }
+        topMovies = Array(movies.prefix(20))
     }
 
 
