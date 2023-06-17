@@ -87,6 +87,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 posterImageView.load(url: fullUrl)
             }
         }
+        
+        if let idLabel = cell.viewWithTag(12) as? UILabel {
+            idLabel.text = "\(movie.id)"
+        }
             
         return cell
     }

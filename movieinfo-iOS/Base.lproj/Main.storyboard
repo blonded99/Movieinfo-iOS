@@ -156,11 +156,19 @@
                                                         <constraint firstAttribute="width" constant="170" id="rPV-3J-Xlx"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzC-En-xek" userLabel="idLabel">
+                                                    <rect key="frame" x="185" y="45.333333333333336" width="42" height="21.000000000000007"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cS5-yG-SUt" firstAttribute="top" secondItem="0sK-qP-cCF" secondAttribute="top" id="Ger-Nj-q3u"/>
                                                 <constraint firstItem="yQt-XS-CkY" firstAttribute="leading" secondItem="cS5-yG-SUt" secondAttribute="trailing" constant="15" id="PRw-bn-E6G"/>
+                                                <constraint firstItem="zzC-En-xek" firstAttribute="leading" secondItem="cS5-yG-SUt" secondAttribute="trailing" constant="15" id="TMt-uS-7aT"/>
                                                 <constraint firstAttribute="bottom" secondItem="cS5-yG-SUt" secondAttribute="bottom" id="YCU-ZK-Qcs"/>
+                                                <constraint firstItem="zzC-En-xek" firstAttribute="top" secondItem="yQt-XS-CkY" secondAttribute="bottom" constant="10" id="Zmf-q6-cxv"/>
                                                 <constraint firstItem="cS5-yG-SUt" firstAttribute="top" secondItem="0sK-qP-cCF" secondAttribute="top" id="eTL-qU-8cO"/>
                                                 <constraint firstItem="cS5-yG-SUt" firstAttribute="leading" secondItem="0sK-qP-cCF" secondAttribute="leading" id="hLh-5a-gXc"/>
                                                 <constraint firstItem="yQt-XS-CkY" firstAttribute="top" secondItem="0sK-qP-cCF" secondAttribute="top" constant="15" id="xB7-c5-rcg"/>
