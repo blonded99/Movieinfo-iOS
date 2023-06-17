@@ -108,8 +108,44 @@
                     <view key="view" contentMode="scaleToFill" id="4CO-nw-HOf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ow8-ed-UrO">
+                                <rect key="frame" x="23" y="98" width="131" height="32"/>
+                                <segments>
+                                    <segment title="Movie title"/>
+                                    <segment title="Actor name"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvq-Gv-7Yo" userLabel="searchTextField">
+                                <rect key="frame" x="23" y="136" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64x-hW-FrU" userLabel="searchButton">
+                                <rect key="frame" x="268" y="138" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ykt-i8-YkH">
+                                <rect key="frame" x="0.0" y="188" width="393" height="581"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="i8N-wL-U2s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ykt-i8-YkH" firstAttribute="leading" secondItem="i8N-wL-U2s" secondAttribute="leading" id="09G-Wx-foR"/>
+                            <constraint firstItem="ykt-i8-YkH" firstAttribute="trailing" secondItem="i8N-wL-U2s" secondAttribute="trailing" id="0Ae-oE-RCE"/>
+                            <constraint firstItem="i8N-wL-U2s" firstAttribute="trailing" secondItem="pvq-Gv-7Yo" secondAttribute="trailing" constant="120" id="8d1-P0-Z9f"/>
+                            <constraint firstItem="64x-hW-FrU" firstAttribute="top" secondItem="pvq-Gv-7Yo" secondAttribute="top" id="96q-tT-a6V"/>
+                            <constraint firstItem="ykt-i8-YkH" firstAttribute="top" secondItem="64x-hW-FrU" secondAttribute="bottom" constant="15" id="INl-WS-c07"/>
+                            <constraint firstItem="Ow8-ed-UrO" firstAttribute="leading" secondItem="i8N-wL-U2s" secondAttribute="leading" constant="30" id="g50-AW-sDl"/>
+                            <constraint firstItem="pvq-Gv-7Yo" firstAttribute="leading" secondItem="Ow8-ed-UrO" secondAttribute="leading" id="n0I-7N-9GO"/>
+                            <constraint firstItem="i8N-wL-U2s" firstAttribute="trailing" secondItem="64x-hW-FrU" secondAttribute="trailing" constant="50" id="r60-GC-2d8"/>
+                            <constraint firstItem="Ow8-ed-UrO" firstAttribute="top" secondItem="i8N-wL-U2s" secondAttribute="top" constant="40" id="rTj-5Q-JhG"/>
+                            <constraint firstItem="pvq-Gv-7Yo" firstAttribute="top" secondItem="Ow8-ed-UrO" secondAttribute="bottom" constant="8" id="uXO-DV-zRY"/>
+                            <constraint firstItem="i8N-wL-U2s" firstAttribute="bottom" secondItem="ykt-i8-YkH" secondAttribute="bottom" id="x0w-0D-WBW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="kMI-Hw-YRL"/>
                 </viewController>
