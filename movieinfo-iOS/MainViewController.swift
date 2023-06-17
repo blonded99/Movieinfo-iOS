@@ -51,7 +51,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     // Sort movies by vote average and update topMovies
     func sortMoviesByVoteAverage() {
-        let sortedMovies = movies.filter { $0.vote_count >= 300 }.sorted { $0.vote_average > $1.vote_average }
+        let sortedMovies = movies.filter { $0.vote_count >= 1000 }.sorted { $0.vote_average > $1.vote_average }
         topMovies = Array(sortedMovies.prefix(20))
     }
 
