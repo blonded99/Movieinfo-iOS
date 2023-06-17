@@ -46,7 +46,7 @@ struct CSVLoader {
                 }
                 columns.append(currentColumn)
 
-                guard columns.count > 14 else { continue }
+                guard columns.count > 15 else { continue }
 
                 let movie = Movie(
                     adult: columns[0] == "True",
@@ -63,7 +63,8 @@ struct CSVLoader {
                     title: columns[11].replacingOccurrences(of: "\'", with: ""),
                     vote_average: Double(columns[12]) ?? 0.0,
                     vote_count: Double(columns[13]) ?? 0.0,
-                    tmdbId: Double(columns[14]) ?? 0.0
+                    tmdbId: Double(columns[14]) ?? 0.0,
+                    cast: parseArray(from: columns[15])
                 )
 
                 movies.append(movie)
