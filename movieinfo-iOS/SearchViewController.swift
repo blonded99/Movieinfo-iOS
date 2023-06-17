@@ -13,7 +13,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    
     var searchResults: [Movie] = []
 
     override func viewDidLoad() {
@@ -55,11 +54,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let movie = searchResults[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath)
         
-        // Here you can update the cell with the movie information.
-        cell.textLabel?.text = movie.title
+        if let titleLabel = cell.viewWithTag(10) as? UILabel{
+            let movie = searchResults[indexPath.row]
+            titleLabel.text = movie.title
+            if let posterImageView = cell.viewWithTag(11) as? UIImageView {
+                    posterImageView.image = UIImage(named: "testImg")
+                }
+        }
         
         return cell
     }
