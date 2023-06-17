@@ -11,7 +11,7 @@
         <!--Main-->
         <scene sceneID="v04-gv-Stl">
             <objects>
-                <viewController title="Main" id="acA-F6-FO8" sceneMemberID="viewController">
+                <viewController title="Main" id="acA-F6-FO8" customClass="MainViewController" customModule="movieinfo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fmp-Fz-lMa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,12 +22,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXP-Ul-B8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="-1880"/>
+            <point key="canvasLocation" x="664.8854961832061" y="-1880.2816901408451"/>
         </scene>
         <!--Search-->
         <scene sceneID="sk9-ZU-8rX">
             <objects>
-                <viewController title="Search" id="d25-x6-VHX" sceneMemberID="viewController">
+                <viewController title="Search" id="d25-x6-VHX" customClass="SearchViewController" customModule="movieinfo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4CO-nw-HOf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
         <!--Detail-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Detail" id="BYZ-38-t0r" customClass="ViewController" customModule="movieinfo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" id="BYZ-38-t0r" customClass="DetailViewController" customModule="movieinfo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,6 +62,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4HX-GA-4nb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ARF-zf-MRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
