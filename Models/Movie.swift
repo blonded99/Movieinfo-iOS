@@ -24,4 +24,5 @@ struct Movie {
     var vote_count: Double
     var tmdbId: Double
     var cast: [String]
+    var id: Int
 }
