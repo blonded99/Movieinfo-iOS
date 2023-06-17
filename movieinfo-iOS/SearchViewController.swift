@@ -95,6 +95,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if let overviewLabel = cell.viewWithTag(13) as? UILabel {
             overviewLabel.text = movie.overview
         }
+        
+        if let dateLabel = cell.viewWithTag(14) as? UILabel {
+            dateLabel.text = movie.release_date
+        }
             
         return cell
     }
