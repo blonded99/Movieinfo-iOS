@@ -15,10 +15,48 @@
                     <view key="view" contentMode="scaleToFill" id="fmp-Fz-lMa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dzb-Af-iYr">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" id="2te-Hf-gxA">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2te-Hf-gxA" id="dyt-8h-tHp">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmO-Ks-IqL">
+                                                    <rect key="frame" x="30" y="21" width="333" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jmO-Ks-IqL" secondAttribute="trailing" constant="10" id="c9y-5q-B1l"/>
+                                                <constraint firstItem="jmO-Ks-IqL" firstAttribute="top" secondItem="dyt-8h-tHp" secondAttribute="topMargin" constant="10" id="gtB-Xy-Roz"/>
+                                                <constraint firstItem="jmO-Ks-IqL" firstAttribute="leading" secondItem="dyt-8h-tHp" secondAttribute="leadingMargin" constant="10" id="z4f-YB-Ccx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Mzd-re-eyq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dzb-Af-iYr" firstAttribute="leading" secondItem="Mzd-re-eyq" secondAttribute="leading" id="Fee-uB-xB0"/>
+                            <constraint firstItem="Mzd-re-eyq" firstAttribute="bottom" secondItem="dzb-Af-iYr" secondAttribute="bottom" id="IX4-f8-6v5"/>
+                            <constraint firstItem="Mzd-re-eyq" firstAttribute="trailing" secondItem="dzb-Af-iYr" secondAttribute="trailing" id="YLK-wB-WQB"/>
+                            <constraint firstItem="dzb-Af-iYr" firstAttribute="top" secondItem="Mzd-re-eyq" secondAttribute="top" id="twv-Wn-G36"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="LWi-D4-Roy"/>
+                    <connections>
+                        <outlet property="tableView" destination="dzb-Af-iYr" id="Ifu-mB-IQt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXP-Ul-B8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
