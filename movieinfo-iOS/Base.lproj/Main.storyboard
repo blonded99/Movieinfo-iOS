@@ -68,7 +68,7 @@
                                 <segments>
                                     <segment title="Popularity"/>
                                     <segment title="Vote Count"/>
-                                    <segment title="Vote Average"/>
+                                    <segment title="Rating"/>
                                 </segments>
                                 <connections>
                                     <action selector="sortValueChanged:" destination="acA-F6-FO8" eventType="valueChanged" id="t4a-HC-xBS"/>
