@@ -89,6 +89,24 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         return cell
     }
+    
+    // MARK: - TableView Delegate Methods
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Perform the segue
+        performSegue(withIdentifier: "showDetailFromMain", sender: self)
+    }
+
+    // Prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "showDetailFromMain" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationVC = segue.destination as! DetailViewController
+                destinationVC.movie = topMovies[indexPath.row]
+            }
+        }
+    }
 
 
 
