@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dzb-Af-iYr">
-                                <rect key="frame" x="0.0" y="190" width="393" height="579"/>
+                                <rect key="frame" x="0.0" y="226" width="393" height="543"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="80" id="2te-Hf-gxA">
@@ -76,17 +76,29 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-FZ-903" userLabel="ratingLabel">
-                                <rect key="frame" x="335.33333333333331" y="154" width="29.666666666666686" height="21"/>
+                                <rect key="frame" x="333.33333333333331" y="200" width="29.666666666666686" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lY-56-oBp" userLabel="titleLabel">
-                                <rect key="frame" x="30" y="154" width="29.666666666666671" height="21"/>
+                                <rect key="frame" x="30" y="200" width="29.666666666666671" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gQy-AY-LJE">
+                                <rect key="frame" x="0.0" y="139" width="393" height="32"/>
+                                <segments>
+                                    <segment title="전체"/>
+                                    <segment title="코미디"/>
+                                    <segment title="로맨스"/>
+                                    <segment title="액션"/>
+                                </segments>
+                                <connections>
+                                    <action selector="genreValueChanged:" destination="acA-F6-FO8" eventType="valueChanged" id="kau-6x-oYu"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mzd-re-eyq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -94,18 +106,23 @@
                             <constraint firstItem="Mzd-re-eyq" firstAttribute="trailing" secondItem="PbD-Go-Eeg" secondAttribute="trailing" id="3k4-36-2mP"/>
                             <constraint firstItem="dzb-Af-iYr" firstAttribute="leading" secondItem="Mzd-re-eyq" secondAttribute="leading" id="Fee-uB-xB0"/>
                             <constraint firstItem="Mzd-re-eyq" firstAttribute="bottom" secondItem="dzb-Af-iYr" secondAttribute="bottom" id="IX4-f8-6v5"/>
+                            <constraint firstItem="gQy-AY-LJE" firstAttribute="leading" secondItem="Mzd-re-eyq" secondAttribute="leading" id="KgQ-eI-bok"/>
+                            <constraint firstItem="4lY-56-oBp" firstAttribute="top" secondItem="gQy-AY-LJE" secondAttribute="bottom" constant="30" id="NGq-5X-TCv"/>
                             <constraint firstItem="PbD-Go-Eeg" firstAttribute="leading" secondItem="Mzd-re-eyq" secondAttribute="leading" id="OCR-dh-soP"/>
+                            <constraint firstItem="dzb-Af-iYr" firstAttribute="top" secondItem="AOf-FZ-903" secondAttribute="bottom" constant="5" id="P5G-sg-m2m"/>
+                            <constraint firstItem="Mzd-re-eyq" firstAttribute="trailing" secondItem="gQy-AY-LJE" secondAttribute="trailing" id="ROy-U3-o46"/>
                             <constraint firstItem="Mzd-re-eyq" firstAttribute="trailing" secondItem="dzb-Af-iYr" secondAttribute="trailing" id="YLK-wB-WQB"/>
+                            <constraint firstItem="4lY-56-oBp" firstAttribute="leading" secondItem="Mzd-re-eyq" secondAttribute="leading" constant="30" id="aRm-Fe-9Sb"/>
                             <constraint firstItem="PbD-Go-Eeg" firstAttribute="top" secondItem="Mzd-re-eyq" secondAttribute="top" id="adN-rf-SUn"/>
-                            <constraint firstItem="Mzd-re-eyq" firstAttribute="trailing" secondItem="AOf-FZ-903" secondAttribute="trailing" constant="28" id="aej-Pt-JFq"/>
-                            <constraint firstItem="4lY-56-oBp" firstAttribute="leading" secondItem="Mzd-re-eyq" secondAttribute="leading" constant="30" id="eCT-lP-xi3"/>
-                            <constraint firstItem="dzb-Af-iYr" firstAttribute="top" secondItem="4lY-56-oBp" secondAttribute="bottom" constant="15" id="gTQ-Vr-Ogn"/>
-                            <constraint firstItem="4lY-56-oBp" firstAttribute="top" secondItem="PbD-Go-Eeg" secondAttribute="bottom" constant="20" id="hWp-zd-R5h"/>
-                            <constraint firstItem="AOf-FZ-903" firstAttribute="top" secondItem="4lY-56-oBp" secondAttribute="top" id="xIj-K1-P9d"/>
+                            <constraint firstItem="AOf-FZ-903" firstAttribute="bottom" secondItem="4lY-56-oBp" secondAttribute="bottom" id="i2s-m9-94q"/>
+                            <constraint firstItem="gQy-AY-LJE" firstAttribute="top" secondItem="PbD-Go-Eeg" secondAttribute="bottom" constant="5" id="mcR-yp-1Eo"/>
+                            <constraint firstItem="Mzd-re-eyq" firstAttribute="trailing" secondItem="AOf-FZ-903" secondAttribute="trailing" constant="30" id="oC8-lc-Lwk"/>
+                            <constraint firstItem="AOf-FZ-903" firstAttribute="top" secondItem="4lY-56-oBp" secondAttribute="top" id="xM3-67-i9e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I7C-xO-Bsc"/>
                     <connections>
+                        <outlet property="genreSegmentedControl" destination="gQy-AY-LJE" id="FdZ-Oh-MRE"/>
                         <outlet property="sortSegmentedControl" destination="PbD-Go-Eeg" id="bnd-YL-cMq"/>
                         <outlet property="tableView" destination="dzb-Af-iYr" id="Ifu-mB-IQt"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showDetailFromMain" id="7x5-bN-GUS"/>
@@ -489,7 +506,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PBh-89-7VX"/>
+        <segue reference="7x5-bN-GUS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>

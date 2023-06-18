@@ -10,6 +10,7 @@ import UIKit
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var genreSegmentedControl: UISegmentedControl!
     
     let loader = CSVLoader(filename: "movies_metadata")
 
@@ -31,26 +32,48 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
-    // 인기순
+    //인기순
     func sortMoviesByPopularity() {
-        let movies = MovieDataStore.shared.movies.sorted { $0.popularity > $1.popularity }
+        let movies = filterMoviesBySelectedGenre().sorted { $0.popularity > $1.popularity }
         topMovies = Array(movies.prefix(20))
     }
 
-    // 평가수 많은순
+    //평가 수 많은순
     func sortMoviesByVoteCount() {
-        let movies = MovieDataStore.shared.movies.sorted { $0.vote_count > $1.vote_count }
+        let movies = filterMoviesBySelectedGenre().sorted { $0.vote_count > $1.vote_count }
         topMovies = Array(movies.prefix(20))
     }
 
-    // 평점순
+    //평점순
     func sortMoviesByVoteAverage() {
-        let movies = MovieDataStore.shared.movies.filter { $0.vote_count >= 1000 }.sorted { $0.vote_average > $1.vote_average }
+        let movies = filterMoviesBySelectedGenre().filter { $0.vote_count >= 1000 }.sorted { $0.vote_average > $1.vote_average }
         topMovies = Array(movies.prefix(20))
     }
 
 
+    @IBAction func genreValueChanged(_ sender: UISegmentedControl) {
+        sortMovies()
+    }
+    
+    func filterMoviesBySelectedGenre() -> [Movie] {
+        switch genreSegmentedControl.selectedSegmentIndex {
+        case 1: // 코미디
+            return MovieDataStore.shared.movies.filter { $0.genres.contains("Comedy") }
+        case 2: // 로맨스
+            return MovieDataStore.shared.movies.filter { $0.genres.contains("Romance") }
+        case 3: // 액션
+            return MovieDataStore.shared.movies.filter { $0.genres.contains("Action") }
+        default: // 전체
+            return MovieDataStore.shared.movies
+        }
+    }
+
+    
     @IBAction func sortValueChanged(_ sender: UISegmentedControl) {
+        sortMovies()
+    }
+    
+    func sortMovies() {
         switch sortSegmentedControl.selectedSegmentIndex {
         case 0:
             sortMoviesByPopularity()
