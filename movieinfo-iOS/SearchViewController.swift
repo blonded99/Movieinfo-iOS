@@ -7,7 +7,7 @@
 
 import UIKit
 
-// Extend UIImageView to add load function
+// 이미지 로드 용도
 extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in
@@ -16,9 +16,8 @@ extension UIImageView {
                     self?.image = image
                 }
             } else {
-                // In case image couldn't be loaded, set to a default image
                 DispatchQueue.main.async {
-                    self?.image = UIImage(named: "sampleImg") // Change "testImg" to your default image name
+                    self?.image = UIImage(named: "sampleImg")
                 }
             }
         }
@@ -54,9 +53,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchResults.removeAll()
         
         switch searchTypeSegmentedControl.selectedSegmentIndex {
-        case 0: // MovieTitle
+        case 0: // 영화명
             searchResults = MovieDataStore.shared.movies.filter { $0.title.lowercased().contains(searchText.lowercased()) }
-        case 1: // ActorName
+        case 1: // 배우명
             searchResults = MovieDataStore.shared.movies.filter { movie in
                 movie.cast.contains(where: { $0.lowercased().contains(searchText.lowercased()) })
             }
@@ -67,7 +66,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.reloadData()
     }
 
-    // MARK: - TableView DataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResults.count
     }
@@ -105,16 +103,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     
-    // MARK: - TableView Delegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Perform the segue
         performSegue(withIdentifier: "showDetail", sender: self)
     }
 
     // Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationVC = segue.destination as! DetailViewController

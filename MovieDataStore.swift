@@ -8,16 +8,14 @@
 import Foundation
 
 class MovieDataStore {
-    // Create the shared instance
+    // 공유할 데이터
     static let shared = MovieDataStore()
 
-    // The array to hold the movies
     var movies: [Movie] = []
 
-    // Prevent creating another instance
+    // 다른 인스턴스 생성 방지
     private init() {}
 
-    // Load movies using the CSVLoader
     func loadMovies() {
         let loader = CSVLoader(filename: "movies_metadata")
         movies = loader.load()
