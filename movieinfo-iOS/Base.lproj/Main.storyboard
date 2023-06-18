@@ -124,10 +124,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ow8-ed-UrO">
-                                <rect key="frame" x="10" y="118" width="181" height="32"/>
+                                <rect key="frame" x="10" y="118" width="105" height="32"/>
                                 <segments>
-                                    <segment title="Movie title"/>
-                                    <segment title="Actor name"/>
+                                    <segment title="영화명"/>
+                                    <segment title="배우명"/>
                                 </segments>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvq-Gv-7Yo" userLabel="searchTextField">
@@ -206,9 +206,9 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64x-hW-FrU" userLabel="searchButton">
-                                <rect key="frame" x="273" y="159" width="117" height="35"/>
+                                <rect key="frame" x="270" y="159" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="Search"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="검색"/>
                                 <connections>
                                     <action selector="searchButtonTapped:" destination="d25-x6-VHX" eventType="touchUpInside" id="yDl-mk-oBU"/>
                                 </connections>
@@ -222,7 +222,7 @@
                             <constraint firstItem="pvq-Gv-7Yo" firstAttribute="leading" secondItem="i8N-wL-U2s" secondAttribute="leading" constant="10" id="5qb-tr-Tk1"/>
                             <constraint firstItem="64x-hW-FrU" firstAttribute="bottom" secondItem="pvq-Gv-7Yo" secondAttribute="bottom" id="NGr-Xz-dT4"/>
                             <constraint firstItem="Ow8-ed-UrO" firstAttribute="top" secondItem="i8N-wL-U2s" secondAttribute="top" constant="15" id="NNf-yj-a7e"/>
-                            <constraint firstItem="64x-hW-FrU" firstAttribute="leading" secondItem="pvq-Gv-7Yo" secondAttribute="trailing" constant="3" id="WHA-3D-dt5"/>
+                            <constraint firstItem="64x-hW-FrU" firstAttribute="leading" secondItem="pvq-Gv-7Yo" secondAttribute="trailing" id="WHA-3D-dt5"/>
                             <constraint firstItem="WOD-SN-quW" firstAttribute="top" secondItem="pvq-Gv-7Yo" secondAttribute="bottom" constant="10" id="YMX-rK-8DW"/>
                             <constraint firstItem="Ow8-ed-UrO" firstAttribute="leading" secondItem="i8N-wL-U2s" secondAttribute="leading" constant="10" id="YYz-vT-HFz"/>
                             <constraint firstItem="pvq-Gv-7Yo" firstAttribute="top" secondItem="Ow8-ed-UrO" secondAttribute="bottom" constant="10" id="YyL-au-vak"/>
@@ -489,7 +489,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7x5-bN-GUS"/>
+        <segue reference="PBh-89-7VX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
