@@ -10,12 +10,18 @@ import UIKit
 class DetailViewController: UIViewController {
     var movie: Movie?
 
-    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var movieImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var isAdultLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet weak var castLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        testLabel.text = movie?.title
-        testLabel.sizeToFit()
         // Do any additional setup after loading the view.
     }
     
