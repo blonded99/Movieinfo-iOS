@@ -80,10 +80,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
 
         if let titleLabel = cell.viewWithTag(1) as? UILabel,
-           let ratingLabel = cell.viewWithTag(2) as? UILabel {
+           let ratingLabel = cell.viewWithTag(2) as? UILabel, let dateLabel = cell.viewWithTag(3) as? UILabel{
             let movie = topMovies[indexPath.row]
             titleLabel.text = movie.title
             ratingLabel.text = String(movie.vote_average)
+            dateLabel.text = movie.release_date
         }
 
         return cell
