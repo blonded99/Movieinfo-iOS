@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class DetailViewController: UIViewController {
     var movie: Movie?
 
@@ -19,11 +20,37 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var castLabel: UILabel!
     @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var ratingTextField: UITextField!
+    @IBOutlet weak var myRatingLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         loadMovieDetails()
+        
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            // Check if a user rating already exists for this movie
+            if let userRating = appDelegate.userRatings[movie?.id ?? -1] {
+                myRatingLabel.text = "\(userRating)"
+            } else {
+                myRatingLabel.text = "N/A"
+            }
+        }
+        
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        // Ensure there's a valid movie and rating text
+        guard let movie = movie, let ratingText = ratingTextField.text else {
+            return
+        }
+        // Save the rating to the dictionary
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate{
+            appDelegate.userRatings[movie.id] = ratingText
+        }
+        // Update the label
+        myRatingLabel.text = "\(ratingText)"
     }
     
     func loadMovieDetails() {
