@@ -93,7 +93,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         if let overviewLabel = cell.viewWithTag(13) as? UILabel {
-            overviewLabel.text = movie.overview
+            let sentences = movie.overview.split(separator: ".", maxSplits: 1, omittingEmptySubsequences: true)
+            overviewLabel.text = (sentences.first.map(String.init) ?? "") + "."
         }
         
         if let dateLabel = cell.viewWithTag(14) as? UILabel {
