@@ -23,17 +23,47 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadMovieDetails()
     }
     
+    func loadMovieDetails() {
+        guard let movie = movie else { return }
+        
+        // Movie image
+        let baseUrl = "https://image.tmdb.org/t/p/w185"
+        let fullUrlString = baseUrl + movie.poster_path
+        if let fullUrl = URL(string: fullUrlString) {
+            movieImage.load(url: fullUrl)
+        }
+        
+        // Title
+        titleLabel.text = movie.title
+        
+        // Rating
+        ratingLabel.text = "\(movie.vote_average)"
+        
+        // Release date(years only)
+        let year = String(movie.release_date.prefix(4))
+        yearLabel.text = year
+        
+        // 4. Running time
+        let runtime = Int(movie.runtime)
+        timeLabel.text = "\(runtime) 분"
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        // Is adult
+        isAdultLabel.text = movie.adult ? "청소년 관람불가" : "청소년 관람가능"
+        
+        // Genres
+        genreLabel.text = movie.genres.prefix(3).joined(separator: ", ")
+        
+        // Cast
+        castLabel.text = movie.cast.prefix(4).joined(separator: ", ")
+        
+        // Production company
+        if let firstCompany = movie.production_companies.first {
+            companyLabel.text = firstCompany
+        }
     }
-    */
 
 }
