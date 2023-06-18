@@ -18,7 +18,7 @@ extension UIImageView {
             } else {
                 // In case image couldn't be loaded, set to a default image
                 DispatchQueue.main.async {
-                    self?.image = UIImage(named: "testImg") // Change "testImg" to your default image name
+                    self?.image = UIImage(named: "sampleImg") // Change "testImg" to your default image name
                 }
             }
         }
