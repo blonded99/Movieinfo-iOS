@@ -8,10 +8,14 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    var movie: Movie?
 
+    @IBOutlet weak var testLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        testLabel.text = movie?.title
+        testLabel.sizeToFit()
         // Do any additional setup after loading the view.
     }
     

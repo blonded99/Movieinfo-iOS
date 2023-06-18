@@ -107,6 +107,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // MARK: - TableView Delegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Implement the navigation to Movie Detail Screen
+        // Perform the segue
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
+
+    // Prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "showDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationVC = segue.destination as! DetailViewController
+                destinationVC.movie = searchResults[indexPath.row]
+            }
+        }
+    }
+
 }
